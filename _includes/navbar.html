@@ -1,0 +1,97 @@
+<nav class="navbar navbar-expand-lg navbar-expand-md">
+  <div class="container">
+    <button 
+      class="navbar-toggler my-auto" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbar" 
+      aria-controls="navbar" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation"
+    >
+      <img id="menu" src="https://img.icons8.com/?size=100&id=100642&format=png&color=000000" alt="">
+    </button>
+
+    <a href="/" class="navbar-brand me-auto">paraskun</a>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a href="/" class="nav-link active">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/work" class="nav-link active">Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="/blog" class="nav-link active">Blog</a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="{{ site.github }}" class="ms-auto"><img id="github" src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" style="margin-right: 15px;" alt="GitHub icon"></a>
+    <img id="switch" src="https://img.icons8.com/?size=100&id=60002&format=png&color=000000" alt="Theme switch icon">
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    font-family: "Outfit", serif;
+
+    .navbar-brand {
+      font-size: 24px;
+      padding: 0;
+    }
+
+    .nav-item {
+      font-size: 18px;
+
+      margin-left: 24px;
+      margin-right: 24px;
+
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-color: black;
+        transition: 0.5s;
+      }
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+
+      &a {
+        padding: 0;
+      }
+    }
+
+    button {
+      margin-right: 5px;
+
+      border: none;
+      outline: none;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+</style>
+
+<script>
+  document.getElementById("switch").addEventListener('click', e => {
+    if (document.body.getAttribute('data-bs-theme') == 'light') {
+      document.getElementById("github").src = 'https://img.icons8.com/?size=100&id=62856&format=png&color=ffffff'
+      document.getElementById("switch").src = 'https://img.icons8.com/?size=100&id=Dy7MNrQn8jEs&format=png&color=ffffff'
+      document.getElementById("menu").src = 'https://img.icons8.com/?size=100&id=100642&format=png&color=ffffff'
+    } else {
+      document.getElementById("github").src = 'https://img.icons8.com/?size=100&id=62856&format=png&color=000000'
+      document.getElementById("switch").src = 'https://img.icons8.com/?size=100&id=60002&format=png&color=000000'
+      document.getElementById("menu").src = 'https://img.icons8.com/?size=100&id=100642&format=png&color=000000'
+    }
+  })
+</script>
